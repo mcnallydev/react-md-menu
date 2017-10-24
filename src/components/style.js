@@ -2,21 +2,24 @@ import styled, { keyframes } from 'styled-components';
 
 export const MenuTag = styled.div`
   display: ${props => props.open ? 'inline-block' : 'none'};
-  position: relative;
+  position: fixed;
   overflow: hidden;
-  background-color: #FFFFFF;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 -1px 1px -1px rgba(0,0,0,.12);
   border-radius: 2px;
+  max-height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
 export const Options = styled.div`
   position: relative;
   overflow: hidden;
+  background-color: #FFFFFF;
 `;
 
 export const Option = styled.div`
   color: #212121;
-  padding: 10px 15px;
+  padding: 10px 25px 10px 15px;
   position: relative;
   overflow: hidden;
   &:hover {

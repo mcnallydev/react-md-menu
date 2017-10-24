@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
+      open: true,
       options: [
         {
           label: 'Man',
@@ -40,6 +40,7 @@ class App extends Component {
           options={this.state.options}
           onClick={this.onClick}
         />
+        <div>Demo</div>
       </div>
     );
   }
