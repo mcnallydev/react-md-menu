@@ -20,8 +20,9 @@ class App extends Component {
     }
   }
 
-  onClick = (option) => {
+  onClick = (option, identifier) => {
     console.log(option);
+    console.log(identifier);
     this.onToggle();
   }
 
@@ -36,6 +37,7 @@ class App extends Component {
       <div>
         <div onClick={this.onToggle}>Demo</div>
         <Menu
+          identifier="example"
           open={this.state.open}
           options={this.state.options}
           onClick={this.onClick}

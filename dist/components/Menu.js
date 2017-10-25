@@ -42,13 +42,14 @@ var Menu = function (_Component) {
         open: false
       });
 
-      _this.props.onClick(option);
+      _this.props.onClick(option, _this.state.identifier);
     };
 
     _this.state = {
+      identifier: props.identifier,
+      open: props.open,
       options: props.options,
-      selected: props.selected,
-      open: props.open
+      selected: props.selected
     };
     return _this;
   }
@@ -63,9 +64,10 @@ var Menu = function (_Component) {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
       this.setState({
+        identifier: nextProps.identifier,
+        open: nextProps.open,
         options: nextProps.options,
-        selected: nextProps.selected,
-        open: nextProps.open
+        selected: nextProps.selected
       });
     }
 
@@ -122,6 +124,7 @@ var Menu = function (_Component) {
 
 
 Menu.propTypes = {
+  identifier: _propTypes2.default.string.isRequired,
   open: _propTypes2.default.bool.isRequired,
   options: _propTypes2.default.array.isRequired,
   selected: _propTypes2.default.object

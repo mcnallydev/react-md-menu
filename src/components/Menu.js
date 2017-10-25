@@ -11,9 +11,10 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      identifier: props.identifier,
+      open: props.open,
       options: props.options,
       selected: props.selected,
-      open: props.open
     };
   }
 
@@ -23,9 +24,10 @@ class Menu extends Component {
    */
   componentWillReceiveProps(nextProps) {
     this.setState({
+      identifier: nextProps.identifier,
+      open: nextProps.open,
       options: nextProps.options,
       selected: nextProps.selected,
-      open: nextProps.open
     });
   }
 
@@ -39,7 +41,7 @@ class Menu extends Component {
       open: false
     });
 
-    this.props.onClick(option);
+    this.props.onClick(option, this.state.identifier);
   }
 
   renderOptions() {
@@ -76,6 +78,7 @@ class Menu extends Component {
  * @type {{show: *, overlay: *}}
  */
 Menu.propTypes = {
+  identifier: PropTypes.string.isRequired,
   open: PropTypes.bool.isRequired,
   options: PropTypes.array.isRequired,
   selected: PropTypes.object
