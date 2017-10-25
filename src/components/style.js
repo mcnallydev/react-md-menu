@@ -9,6 +9,7 @@ export const MenuTag = styled.div`
   max-height: 250px;
   overflow-y: scroll;
   overflow-x: hidden;
+  z-index: 999;
 `;
 
 export const Options = styled.div`
