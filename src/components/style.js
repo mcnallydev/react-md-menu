@@ -2,14 +2,14 @@ import styled, { keyframes } from 'styled-components';
 
 export const MenuTag = styled.div`
   display: ${props => props.open ? 'inline-block' : 'none'};
-  position: fixed;
-  overflow: hidden;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 -1px 1px -1px rgba(0,0,0,.12);
   border-radius: 2px;
   max-height: 250px;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: visible;
   z-index: 999;
+  background-color: #FF0000;
+  position: absolute;
 `;
 
 export const Options = styled.div`
