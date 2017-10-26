@@ -7,8 +7,7 @@ export const MenuTag = styled.div`
   max-height: 250px;
   overflow-y: scroll;
   overflow-x: visible;
-  z-index: 999;
-  background-color: #FF0000;
+  z-index: 9999;
   position: absolute;
 `;
 
